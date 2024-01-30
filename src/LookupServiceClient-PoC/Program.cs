@@ -37,7 +37,7 @@ StsTokenServiceConfiguration PreProductionConfiguration()
     var wspConfiguration = new WspConfiguration(
         "https://lookupservice.test-devtest4-nemlog-in.dk/LookupService.svc",
         "https://saml.wsp.lookupservice.test-devtest4-nemlog-in.dk",
-        EnvelopeVersion.Soap11, //Soap10 is not possible value cf. https://learn.microsoft.com/en-us/dotnet/api/system.servicemodel.envelopeversion?view=dotnet-plat-ext-6.0
+        EnvelopeVersion.Soap11,
         wspCertificate
         );
     
