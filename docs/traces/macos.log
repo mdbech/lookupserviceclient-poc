@@ -1,0 +1,144 @@
+2024-01-30 09:33:49,130 [1] DEBUG OioIdws [(null)] - RequestToken called with the client certificate: C=DK, OID.2.5.4.97=NTRDK-94827547, O=Testorganisation nr. 94827547, SERIALNUMBER=UI:DK-O:G:e980a973-1dcf-4471-9dde-6e55fadfd0a0, CN=LookupService.Client (5A70459359B693FF3EC2943C6CF1CBB37F325D18)
+2024-01-30 09:33:49,185 [1] DEBUG OioIdws [(null)] - RequestToken called with the STS certificate: C=DK, OID.2.5.4.97=NTRDK-34051178, O=Digitaliseringsstyrelsen, SERIALNUMBER=UI:DK-O:G:a040fe26-ce78-4328-ac0e-29eeb12f46df, CN=NemLog-in IdP - Test (357FAAAB559E427FCF66BF81627378A86A1106C3)
+2024-01-30 09:33:49,314 [5] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,393 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,394 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,402 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,408 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,430 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,431 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,431 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,433 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,470 [7] WARN  OioIdws [(null)] - RequestToken send timeout set to 00:03:00
+2024-01-30 09:33:49,770 [1] DEBUG OioIdws [(null)] - RST send to STS before being manipulated:
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue</a:Action>
+  </s:Header>
+  <s:Body>
+    <trust:RequestSecurityToken Context="8a89f623-96f5-40eb-b8ee-8aa4ab26c212" xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+      <trust:RequestType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue</trust:RequestType>
+      <trust:TokenType>http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0</trust:TokenType>
+      <trust:KeyType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/PublicKey</trust:KeyType>
+      <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:Address>https://saml.wsp.lookupservice.test-devtest4-nemlog-in.dk</wsa:Address>
+        </wsa:EndpointReference>
+      </wsp:AppliesTo>
+      <trust:Claims Dialect="http://docs.oasis-open.org/wsfed/authorization/200706/authclaims">
+        <auth:ClaimType Uri="dk:gov:saml:attribute:CvrNumberIdentifier" Optional="false" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+          <auth:Value>94827547</auth:Value>
+        </auth:ClaimType>
+      </trust:Claims>
+      <trust:Entropy>
+        <trust:BinarySecret>INwJZ4OHSleKWrTkSeSroXmjXaRD34VePIvvShWWJ6qJnAsCIU2crAAYdNLOxEHbn3d/ZIFXWrGbkw5d5CQPU9Ra33nRfFedgqchUMej61njv4czUjkilN0PktipLBwg/5q3otdHGmMw/sdD4dOHxY7JCDbUzdVwQx44oNXYAqU=</trust:BinarySecret>
+      </trust:Entropy>
+      <trust:UseKey>
+        <BinarySecurityToken p2:Id="uuid:1ffb0e3f-6363-4279-b5a4-37a29e90f98b" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:p2="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">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</BinarySecurityToken>
+      </trust:UseKey>
+    </trust:RequestSecurityToken>
+  </s:Body>
+</s:Envelope>
+2024-01-30 09:33:49,905 [1] DEBUG OioIdws [(null)] - RST send to STS after being manipulated:
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" wsu:Id="action">http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue</a:Action>
+    <a:MessageID wsu:Id="msgid">uuid:205cdc54-83d3-42aa-965c-a70395641450</a:MessageID>
+    <a:To wsu:Id="to">https://SecureTokenService.test-devtest4-nemlog-in.dk/SecurityTokenService.svc</a:To>
+    <Security s:mustUnderstand="1" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsu:Timestamp wsu:Id="sec-ts">
+        <wsu:Created>2024-01-30T08:33:49Z</wsu:Created>
+        <wsu:Expires>2024-01-30T08:38:49Z</wsu:Expires>
+      </wsu:Timestamp>
+      <BinarySecurityToken ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" wsu:Id="sec-binsectoken">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</BinarySecurityToken>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+          <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+          <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+          <Reference URI="#action">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>q32L54F9pVlMNPZsh9ZRqh90gN6W3BC65OowF2P9pys=</DigestValue>
+          </Reference>
+          <Reference URI="#msgid">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>/7ZAnKREnw6Wrb+o8WYS2o3sbFn/FGgbcDAJw/NO4vs=</DigestValue>
+          </Reference>
+          <Reference URI="#to">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>jXydIxuwohGSRYiPJT8A30P3K9+ZjilIEF7C3WUcWPU=</DigestValue>
+          </Reference>
+          <Reference URI="#sec-ts">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>NzZsCSNA0S8JYuJMUC15EOaqR39OzxAg7Oj+d9P9F7A=</DigestValue>
+          </Reference>
+          <Reference URI="#sec-binsectoken">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>qsoVZEaqh2HKGD4e4rYeexPbivSgs8ZYHb008gTdCSs=</DigestValue>
+          </Reference>
+          <Reference URI="#body">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>MDVymfCMWHR+HokBdlbvTYH8DrqCKQDN5X5QAlvN+iI=</DigestValue>
+          </Reference>
+        </SignedInfo>
+        <SignatureValue>Phy3cgVOTWhftUQkWSKtUzk+aSt41WlHqHIuw9rBcAF6Is/b5s+fpoqZo4SNoMXapt6hLI9jnErNNXGxDtuv0iYu+qXErxdm1d6GqCeXhmj7JARu4ZYI9IfBTQuxtQAcFkwpFI6SYiM2rljI/ssjAq8/rnVbkLDQVE1N9FlIbjrl5J8zsdWktHXpNSwvJuFCoQcdq6FekWksKhOLLQFUQO+hKDgoklJ8vG4RrNWLABXuvznPuJBDe8YYiRuFhc0QuPyK6Vp9nYU46BDoKx6NLjfC3Ywg25jClhTid6rwz/kPf+x5M42aWvZB/olqJTFp75q3T4oOsaRY+tdGJTbL1m/ISGe7VvFhf4NwA8WxkE3UhzliABjVZ4vo13R5aFjlUK+pOMlv7ViKyXMiPJEianVAKipZP5DkLdU2N/ritw3GLG+9Oox4dbGxjA3V2M9M8zimWgaeX+sjYSNYnSAB4QaQi126VNBu2cDK4MVPtTlfHTsLRMacdpr7/fUs+5vw</SignatureValue>
+        <KeyInfo>
+          <SecurityTokenReference xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <Reference URI="#sec-binsectoken" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" />
+          </SecurityTokenReference>
+        </KeyInfo>
+      </Signature>
+    </Security>
+  </s:Header>
+  <s:Body wsu:Id="body">
+    <trust:RequestSecurityToken Context="8a89f623-96f5-40eb-b8ee-8aa4ab26c212" xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+      <trust:RequestType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue</trust:RequestType>
+      <trust:TokenType>http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0</trust:TokenType>
+      <trust:KeyType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/PublicKey</trust:KeyType>
+      <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:Address>https://saml.wsp.lookupservice.test-devtest4-nemlog-in.dk</wsa:Address>
+        </wsa:EndpointReference>
+      </wsp:AppliesTo>
+      <trust:Claims Dialect="http://docs.oasis-open.org/wsfed/authorization/200706/authclaims">
+        <auth:ClaimType Uri="dk:gov:saml:attribute:CvrNumberIdentifier" Optional="false" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+          <auth:Value>94827547</auth:Value>
+        </auth:ClaimType>
+      </trust:Claims>
+      <trust:UseKey>
+        <BinarySecurityToken p2:Id="uuid:1ffb0e3f-6363-4279-b5a4-37a29e90f98b" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:p2="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">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</BinarySecurityToken>
+      </trust:UseKey>
+      <trust:Issuer>
+        <a:EndpointReference>
+          <a:Address>https://saml.test-devtest4-nemlog-in.dk</a:Address>
+        </a:EndpointReference>
+      </trust:Issuer>
+    </trust:RequestSecurityToken>
+  </s:Body>
+</s:Envelope>
+2024-01-30 09:33:50,343 [1] ERROR OioIdws [(null)] - Error occured while requesting token. See exception details!
+System.ServiceModel.ProtocolException: Content Type application/soap+xml; charset=utf-8 was not supported by service https://securetokenservice.test-devtest4-nemlog-in.dk/SecurityTokenService.svc.  The client and service bindings may be mismatched.
+   at System.ServiceModel.Channels.ServiceChannelProxy.ExecuteMessage(Object target, MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeChannel(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+   at generatedProxy_1.Request(Message )
+   at System.ServiceModel.Federation.WSTrustChannelSecurityTokenProvider.GetTokenCore(TimeSpan timeout)
+   at System.IdentityModel.Selectors.SecurityTokenProvider.GetToken(TimeSpan timeout)
+   at Digst.OioIdws.OioWsTrustCore.StsTokenService.GetToken(StsAuthenticationCase stsAuthenticationCase, SecurityToken authenticationToken) 
