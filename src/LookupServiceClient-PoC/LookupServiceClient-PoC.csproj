@@ -4,6 +4,7 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>LookupServiceClient_PoC</RootNamespace>
+        <AssemblyName>LookupServiceClient_PoC</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -12,6 +13,7 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Kombit.OioIdws.WscCore" Version="4.0.71" />
+        <PackageReference Include="log4net" Version="2.0.15" />
         <PackageReference Include="System.ServiceModel.Federation" Version="4.10.2" />
         <PackageReference Include="System.ServiceModel.Primitives" Version="4.10.2" />
     </ItemGroup>

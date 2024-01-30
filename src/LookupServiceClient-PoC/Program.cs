@@ -4,7 +4,10 @@ using System.ServiceModel;
 using System.ServiceModel.Security;
 using Digst.OioIdws.CommonCore;
 using Digst.OioIdws.OioWsTrustCore;
+using log4net.Config;
 using LookupServiceClient_PoC;
+
+XmlConfigurator.Configure();
 
 try
 {
@@ -15,7 +18,6 @@ try
 }
 catch (Exception ex)
 {
-    Console.WriteLine(ex);
     Console.ReadKey();
 }
 
